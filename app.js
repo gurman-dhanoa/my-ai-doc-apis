@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const ApiError = require("./utils/ApiError");
 const app = express();
+const mongoose = require('mongoose');
 
 // Middleware
 app.use(cors());
