@@ -12,6 +12,8 @@ const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
+app.use('/api/doctors', require('./routes/doctor'));
+app.use('/api/ai-recommendations', require('./routes/aiRecommendationRoutes'));
 
 app.get("/", (req, res) => {
   res.send("My AI Doctor app is working fine!");
