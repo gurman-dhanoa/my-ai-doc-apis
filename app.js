@@ -9,7 +9,9 @@ app.use(cors());
 app.use(express.json());
 
 const authRoutes = require("./routes/auth");
+const userRoutes = require("./routes/user");
 app.use("/api/auth", authRoutes);
+app.use("/api/users", userRoutes);
 
 app.get("/", (req, res) => {
   res.send("My AI Doctor app is working fine!");
