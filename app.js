@@ -8,6 +8,10 @@ const mongoose = require('mongoose');
 app.use(cors());
 app.use(express.json());
 
+const connectDB = require("./db");
+connectDB();
+
+
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
 app.use("/api/auth", authRoutes);
